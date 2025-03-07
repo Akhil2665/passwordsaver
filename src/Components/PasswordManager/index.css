@@ -66,7 +66,11 @@
 .password-enter-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 62%;
+  background-color: #454f84;
+  border-radius: 14px;
+  min-height: 400px;
+  padding: 20px;
 }
 
 .password-enter-heading {
@@ -79,7 +83,7 @@
 
 @media (min-width: 768px) {
   .password-manager-image {
-    width: 40%;
+    width: 35%;
     border-radius: 16px;
     margin-bottom: 20px;
     order: 1;
@@ -234,27 +238,25 @@
 }
 
 .label-checkbox {
-  color: #ffffff; /* White text */
+  color: #ffffff;
   font-size: 14px;
 }
 
-/* Container for no data */
 .no-data-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background-color: transparent; /* Light background */
+  background-color: transparent;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
   width: 100%;
 }
 
-/* No passwords image */
 .no-passwords {
-  width: 150px; /* Adjust the size as needed */
+  width: 150px;
   margin-bottom: 10px;
 }
 .saved-password-cards {
@@ -269,6 +271,7 @@
   .saved-password-cards {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     flex-wrap: wrap;
   }
 }

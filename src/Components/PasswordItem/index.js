@@ -16,7 +16,12 @@ const PasswordItem = props => {
     <li className="list-container">
       <h1 className="profile-image">{siteUrl[0].toUpperCase()}</h1>
       <div className="card-content-container">
-        <a href={`https://${siteUrl}`} target="_blank" rel="noreferrer">
+        <a
+          href={`https://${siteUrl}`}
+          target="_blank"
+          rel="noreferrer"
+          className="web-url"
+        >
           <p className="site-url">{siteUrl}</p>
         </a>
         <div className="user-name-container">

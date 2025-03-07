@@ -75,10 +75,19 @@ class PasswordManager extends Component {
   }
 
   render() {
-    const {isShowPasswordActive, siteDataList, searchInput} = this.state
+    const {
+      isShowPasswordActive,
+      siteDataList,
+      searchInput,
+      siteUrl,
+      userName,
+      password,
+    } = this.state
 
     const searchResultList = siteDataList.filter(
-      eachObj => eachObj.siteUrl.includes(searchInput) === true,
+      eachObj =>
+        eachObj.siteUrl.toLowerCase().includes(searchInput.toLowerCase()) ===
+        true,
     )
 
     const searchResultCount =
@@ -115,6 +124,7 @@ class PasswordManager extends Component {
                 placeholder="Enter website"
                 type="text"
                 onChange={this.onChangeWebsite}
+                value={siteUrl}
               />
             </div>
             <div className="input-container">
@@ -127,6 +137,7 @@ class PasswordManager extends Component {
                 className="input-element"
                 placeholder="Enter Username"
                 type="text"
+                value={userName}
                 onChange={this.onChangeUserName}
               />
             </div>
@@ -141,6 +152,7 @@ class PasswordManager extends Component {
                 placeholder="Enter Password"
                 type="password"
                 onChange={this.onChangePassword}
+                value={password}
               />
             </div>
             <button className="add-button" type="submit">
@@ -165,6 +177,7 @@ class PasswordManager extends Component {
                 type="search"
                 className="search-input"
                 onChange={this.onChangeSearchInput}
+                value={searchInput}
                 placeholder="search"
               />
             </div>

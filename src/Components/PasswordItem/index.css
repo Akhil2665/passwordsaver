@@ -86,3 +86,7 @@
   width: 100px;
   height: 20px;
 }
+.web-url {
+  color: #0078ff;
+  text-decoration: none;
+}
